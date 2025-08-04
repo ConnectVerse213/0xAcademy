@@ -133,6 +133,37 @@
 .hero .main .img img{
     width: 90%;
 }
+.live-button {
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.live-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 8px;
+  /* Animation for pulsing effect */
+  animation: live-pulse 1.5s infinite alternate;
+}
+
+@keyframes live-pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
 /* rgba(156,163,175 */
 .partner{
     margin-top: 4rem;
@@ -785,6 +816,7 @@ footer .copyright p{
     }
     .hero .hero-content{
         text-align: center;
+        align-items: center;
     }
     .hero .hero-content .buttons{
         display: flex;
@@ -813,6 +845,9 @@ footer .copyright p{
     }
     .main .img{
         width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .main .img img{
         width: 100%;
@@ -905,4 +940,304 @@ footer .copyright p{
         align-items: center;
         gap: 1rem;
     }
+}
+
+/* Course CSS Script */
+/* Course Details Section */
+.course-details {
+padding: 80px 0;
+background-color: #fff;
+}
+
+.course-details .container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 50px;
+display: flex;
+gap: 50px;
+}
+
+@media only screen and (max-width: 767px){
+    .course-details .container {
+        display: block;
+    }
+}
+
+.course-details .overview {
+flex: 2;
+}
+
+.course-details h2 {
+font-size: 2rem;
+color: #13334d;
+margin-bottom: 20px;
+}
+
+.course-details p {
+font-size: 1.1rem;
+color: #6b7280;
+line-height: 1.6;
+margin-bottom: 30px;
+}
+
+.highlights h3 {
+font-size: 1.5rem;
+color: #13334d;
+margin-bottom: 15px;
+}
+
+.highlights ul {
+list-style-type: none;
+}
+
+.highlights li {
+position: relative;
+padding-left: 30px;
+margin-bottom: 15px;
+font-size: 1.1rem;
+color: #6b7280;
+}
+
+.highlights li:before {
+content: "✓";
+position: absolute;
+left: 0;
+color: #f48c06;
+font-weight: bold;
+}
+
+.info-box {
+flex: 1;
+background-color: #f9f9f9;
+border-radius: 10px;
+padding: 30px;
+height: fit-content;
+}
+
+.info-item {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+font-size: 1.1rem;
+color: #13334d;
+}
+
+.info-item i {
+margin-right: 15px;
+color: #f48c06;
+font-size: 1.5rem;
+}
+
+/* Curriculum Section */
+.curriculum {
+padding: 80px 0;
+background-color: #f8f9fa;
+text-align: center;
+}
+
+.curriculum h2 {
+font-size: 2rem;
+color: #13334d;
+margin-bottom: 50px;
+}
+
+.modules {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 50px;
+}
+
+.module {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+padding: 30px;
+flex: 1 1 300px;
+text-align: left;
+transition: transform 0.3s ease;
+}
+
+.module:hover {
+transform: translateY(-10px);
+}
+
+.module h3 {
+font-size: 1.3rem;
+color: #13334d;
+margin-bottom: 20px;
+padding-bottom: 10px;
+border-bottom: 2px solid #f48c06;
+}
+
+.module ul {
+list-style-type: none;
+}
+
+.module li {
+position: relative;
+padding-left: 25px;
+margin-bottom: 10px;
+font-size: 1rem;
+color: #6b7280;
+}
+
+.module li:before {
+content: "•";
+position: absolute;
+left: 0;
+color: #f48c06;
+font-weight: bold;
+}
+
+/* Instructor Section */
+.instructor {
+padding: 80px 0 0 0;
+text-align: center;
+background-color: #fff;
+}
+
+.instructor h2 {
+font-size: 2rem;
+color: #13334d;
+margin-bottom: 50px;
+}
+
+.profile {
+display: flex;
+align-items: center;
+max-width: 800px;
+margin: 0 auto;
+text-align: left;
+gap: 40px;
+}
+
+.instructor .details .buttons{
+    margin-top: 4%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f48c06;
+    color: #fff;
+    border-radius: 30px;
+    width: 30%;
+    height: 30px;
+    border: #f48c06;
+}
+
+@media only screen and (max-width: 767px){
+    .profile {
+        display: block;
+        text-align: center;
+        align-items: center;
+        padding: 0 15%;
+    }
+}
+
+.profile img {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+object-fit: cover;
+border: 5px solid #f48c06;
+}
+
+.details h3 {
+font-size: 1.5rem;
+color: #13334d;
+margin-bottom: 5px;
+}
+
+.details .title {
+color: #f48c06;
+font-weight: 600;
+margin-bottom: 15px;
+}
+
+.details p {
+font-size: 1.1rem;
+color: #6b7280;
+line-height: 1.6;
+}
+
+/* Enroll CTA Section */
+.enroll-cta {
+padding: 80px 0;
+background-color: #13334d;
+color: #fff;
+text-align: center;
+}
+
+.enroll-cta h2 {
+font-size: 2rem;
+margin-bottom: 20px;
+}
+
+.enroll-cta p {
+font-size: 1.2rem;
+margin-bottom: 30px;
+opacity: 0.9;
+}
+
+.enroll-cta button {
+background-color: #f48c06;
+color: #fff;
+border: none;
+padding: 15px 40px;
+font-size: 1.1rem;
+border-radius: 30px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.enroll-cta button:hover {
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(244, 140, 6, 0.3);
+}
+
+/* Industry Certification Section Styles */
+.industry-certification {
+  background-color: #f8f9fa;
+  padding: 0 0 2em 0;
+  font-family: 'Inter', sans-serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.certification-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 5%;
+}
+
+.certification-header {
+  padding: 2.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #0c3f67 0%, #13334d 100%);
+  color: white;
+}
+
+.certification-body {
+  padding: 2.5rem;
+  text-align: center;
+
+}
+
+.certificate-template {
+  border: 2px dashed #ddd;
+  border-radius: 1%;
+}
+
+.certificate-template h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
