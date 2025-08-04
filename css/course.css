@@ -1,9 +1,5 @@
 /* Base Styles */
         :root {
-            --primary: #3a86ff;
-            --secondary: #8338ec;
-            --dark: #212529;
-            --light: #f8f9fa;
             --success: #38b000;
             --danger: #ef233c;
             --warning: #ffbe0b;
